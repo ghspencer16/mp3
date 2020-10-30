@@ -256,6 +256,7 @@ public class Nodes implements Saveable {
     public void updateAndTrim() {
         jenkins.updateComputerList();
         jenkins.trimLabels();
+        //Needed to commit
     }
 
     /**
