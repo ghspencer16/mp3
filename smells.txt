@@ -1,3 +1,4 @@
 Question 1: The smell for this method would be a long method. We fix this by breaking it up into two separate methods
 Question 2: There is no question for this question
 Question 3: The smell for this situation is feature envy.
+Question 4: To replace the the duplicated code I would add a for-loop that loops 4 times and does the repeated code each loop

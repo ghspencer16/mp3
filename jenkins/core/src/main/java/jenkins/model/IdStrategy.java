@@ -246,6 +246,28 @@ public abstract class IdStrategy extends AbstractDescribableImpl<IdStrategy> imp
                         }
                     } else if (c == '$') {
                         StringBuilder hex = new StringBuilder(4);
+                        //Added
+                        int testBreak = 1;
+                        for(int iterator = 0; iterator < 4; iterator++)
+                        {
+                            i++;
+                            if (i < chars.length) {
+                                hex.append(chars[i]);
+                            } else {
+                                testBreak = -1;
+                                break;
+                            }
+
+                            if(iterator == 3)
+                            {
+                                buf.append(Character.valueOf((char)Integer.parseInt(hex.toString(), 16)));
+                            }
+                        }
+                        if(testBreak < 0)
+                        {
+                            break;
+                        }
+                        /*
                         i++;
                         if (i < chars.length) {
                             hex.append(chars[i]);
@@ -270,7 +292,9 @@ public abstract class IdStrategy extends AbstractDescribableImpl<IdStrategy> imp
                         } else {
                             break;
                         }
+
                         buf.append(Character.valueOf((char)Integer.parseInt(hex.toString(), 16)));
+                         */
                     }
                 }
                 return buf.toString();
