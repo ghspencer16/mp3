@@ -1,0 +1,1 @@
+Question 1: The smell for this method would be a long method. We fix this by breaking it up into two separate methods
